@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+ <!--para ver todo el codigo de una pagina control U-->
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas HTML</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            background-image: url(./Fondo.gif);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        header{
+            background-color: grey;
+            color: orange;
+            text-align: center;
+            border-radius: 5px;
+            
+        }
+
+        header h1{
+            margin-top: 0;
+        }
+
+        main {
+            width: 50%;
+            margin: auto;
+        }
+
+        table {
+            width: 100%;
+            background-color: #eeeeee;
+        }
+
+        table,th,td {
+            border: 1px solid lightslategrey;
+            border-collapse: collapse;
+        }
+
+        th,td {
+            padding: 10px;
+        }
+
+        th{
+            text-align: start;
+        }
+
+        td:hover {
+            background-color: orange;
+        }
+        
+       /*tbody tr: nth-child(event){}*/ 
+       tbody tr:nth-child(odd) {
+            background-color: grey ;
+        }
+
+        /*tr:last-child{}*/
+        #ultima {
+            text-align: center;
+            /*background-color:#4040ff;*/
+            animation: titila 2s linear infinite;
+        }
+
+        @keyframes titila{
+            50%{
+                opacity: 0;
+            }
+        }
+
+        #oferta {
+            background-color: #ffff30;
+            text-align: center;
+        }
+
+        td button {
+            width: 100%;
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>HTML 5 - Clase 5</h1>
+        <h2>Tablas HTML</h2>
+    </header>
+    <main>
+        <table>
+            <caption><h3>Lista de Alumnos</h3> </caption>
+            <thead>
+                <tr>
+                    <th>Profesion</th>
+                    <th>Apellido</th>
+                    <th>Profesion</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Jaime</td>
+                    <td>Salas</td>
+                    <td>Ing. Metalurgico</td>
+                </tr>
+                <tr>
+                    <td>Rosana</td>
+                    <td>Pirela</td>
+                    <td>Cocinera</td>
+                </tr>
+                <tr>
+                    <td>Ana</td>
+                    <td>Delgado</td>
+                    <td>Bailarina</td>
+                </tr>
+                <tr>
+                    <td>Lucila</td>
+                    <td>Oiskulic</td>
+                    <td>Diseñadora Grafica</td>
+                </tr>
+            </tbody>
+        </table>
+            
+        <table>
+            <caption><h3>Otro ejemplo de tabla...</h3></caption>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Descripción</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Pasta</td>
+                    <td>Las mejores pastas del barrio!</td>
+                    <td id="oferta" rowspan="3">
+                        Oferta Especial
+                        <div>
+                            &#128151;&#128151;&#128151;
+                        </div>
+                    </td>
+                    <td><button>Comprar</button></td>
+                </tr>
+                <tr>
+                    <td>Risoto</td>
+                    <td>El mejore risoto!</td>
+                    <td><button>Comprar</button></td>
+                </tr>
+                <tr>
+                    <td>Milanesa</td>
+                    <td>Mejores que las Club de la Milanesa!</td>
+                    <td><button>Comprar</button></td>
+                </tr>
+                <tr>
+                    <td id="ultima" colspan="4">
+                        <strong>
+                            No dejes de rpbar nuestros platos!!
+                        </strong>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
